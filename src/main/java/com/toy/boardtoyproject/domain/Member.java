@@ -1,5 +1,6 @@
 package com.toy.boardtoyproject.domain;
 
+import com.toy.boardtoyproject.api.dto.MemberDtoOut;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,5 +27,9 @@ public class Member {
     public Member(String email, String password) {
         this.email = email;
         this.password = password;
+    }
+
+    public MemberDtoOut toDtoOut() {
+        return new MemberDtoOut(email, password);
     }
 }

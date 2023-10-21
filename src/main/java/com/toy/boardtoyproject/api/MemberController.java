@@ -1,10 +1,10 @@
 package com.toy.boardtoyproject.api;
 
+import com.toy.boardtoyproject.api.dto.MemberDtoIn;
+import com.toy.boardtoyproject.api.dto.MemberDtoOut;
 import com.toy.boardtoyproject.application.MemberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,6 +17,12 @@ public class MemberController {
     public String insertMember() {
         memberService.insertMember();
         return "insert 되었습니다.";
+    }
+
+    @PostMapping("/insert")
+    public MemberDtoOut insertPostMember(@RequestBody MemberDtoIn dtoIn) {
+
+        return memberService.insertPostMember(dtoIn);
     }
 
 }
