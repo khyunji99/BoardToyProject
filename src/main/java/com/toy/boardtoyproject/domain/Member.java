@@ -1,2 +1,4 @@
-package com.toy.boardtoyproject.domain;public class Member {
+package com.toy.boardtoyproject.domain;
+
+public class Member {
 }

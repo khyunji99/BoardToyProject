@@ -1,2 +1,4 @@
-package com.toy.boardtoyproject.domain;public interface MemberRepository {
+package com.toy.boardtoyproject.domain;
+
+public interface MemberRepository {
 }

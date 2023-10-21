@@ -1,2 +1,6 @@
-package com.toy.boardtoyproject.api;public class MemberController {
+package com.toy.boardtoyproject.api;
+
+public class MemberController {
+
+
 }
